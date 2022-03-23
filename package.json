@@ -1,0 +1,23 @@
+{
+  "name": "ai-tensorflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@tensorflow-models/speech-commands": "^0.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvenyYlzz/AI-Tensorflow.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvenyYlzz/AI-Tensorflow.js/issues"
+  },
+  "homepage": "https://github.com/EvenyYlzz/AI-Tensorflow.js#readme"
+}
