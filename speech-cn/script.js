@@ -76,3 +76,16 @@ window.toggle = async (checked) => {
     transferRecognizer.stopListening()
   }
 }
+
+
+window.save = () => {
+  // 将js的array buffer格式的数据转化为二进制文件保存
+  const arrayBuffer = transferRecognizer.serializeExamples()
+  // 首先转为blog格式
+  const blob = new Blob([arrayBuffer])
+  // 通过创建a标签指向下载链接，然后触发点击下载
+  const link = document.createElement('a')
+  link.href = window.URL.createObjectURL(blob)
+  link.download = 'data.bin'
+  link.click()
+}
