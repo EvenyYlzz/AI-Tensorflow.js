@@ -44,6 +44,7 @@ window.toggle = async (checked) => {
       const labels = transferRecognizer.wordLabels()
       const index = scores.indexOf(Math.max(...scores))
       console.log('本次识别指令结果为：', labels[index])
+      window.play(labels[index])
     },
     {
       // 控制识别频率 （0～1）
@@ -54,4 +55,25 @@ window.toggle = async (checked) => {
   } else {
     transferRecognizer.stopListening()
   }
+}
+
+let curIndex = 0
+window.play = (label) => {
+  const div = document.querySelector('.slider>div')
+  const imgLength = document.querySelectorAll('img').length
+  if(label === '上一张') {
+    if (curIndex === 0) {
+      alert('已经是第一张了')
+      return
+    }
+    curIndex -= 1
+  } else {
+    if (curIndex === imgLength - 1) {
+      alert('已经是最后一张了')
+      return
+    }
+    curIndex += 1 
+  }
+  div.style.transition = 'transform 1s'
+  div.style.transform = `translateX(-${100 * curIndex}%)`
 }
