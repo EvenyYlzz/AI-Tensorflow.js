@@ -1,0 +1,30 @@
+<script src="script.js"></script>
+<button onclick="collect(this)">上一张</button>
+<button onclick="collect(this)">下一张</button>
+<button onclick="collect(this)">背景噪音</button>
+<pre id="count"></pre>
+<button onclick="train()">训练</button>
+<br><br>
+监听开关：<input type="checkbox" onchange="toggle(this.checked)">
+
+
+<style>
+  .slider {
+      width: 600px;
+      overflow: hidden;
+      margin: 10px;
+  }
+  .slider > div{
+      display: flex;
+      align-items: center;
+  }
+</style>
+<div class="slider">
+  <div>
+      <img src="../imgs/1.jpg" alt="" width="600">
+      <img src="../imgs/2.jpg" alt="" width="600">
+      <img src="../imgs/3.jpg" alt="" width="600">
+      <img src="../imgs/4.jpg" alt="" width="600">
+      <img src="../imgs/5.jpg" alt="" width="600">
+  </div>
+</div>
